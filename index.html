@@ -1,78 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
-    <title>FocusTimer - 2.0</title>
-  </head>
-  <body>
-    <main>
-      <div class="buttonLightDarkmode" id="buttonLightDarkMode">
-        <div class="boxButton" id="boxButton">
-          <div class="boxInsideBall" id="boxInsideBall"></div>
-          <div class="themeMomentActive">
-            <img
-              id="moon"
-              src="./assets/images/moon.svg"
-              alt="Ícone do botão em formato de lua"
-            />
-            <img
-              id="moon"
-              src="./assets/images/sun.svg"
-              alt="Ícone do botão em formato de sol"
-            />
-          </div>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+  <title>FocusTimer - 2.0</title>
+</head>
+
+<body>
+  <main>
+    <div class="buttonLightDarkmode" id="buttonLightDarkMode">
+      <div class="boxButton" id="boxButton">
+        <div class="boxInsideBall" id="boxInsideBall"></div>
+        <div class="themeMomentActive">
+          <img id="moon" src="./assets/images/moon.svg" alt="Ícone do botão em formato de lua" />
+          <img id="moon" src="./assets/images/sun.svg" alt="Ícone do botão em formato de sol" />
         </div>
       </div>
-      <section class="timer">
-        <div class="clock">
-          <span id="minutes">00</span>
-          <span>:</span>
-          <span id="seconds">00</span>
-        </div>
-        <div class="settingsButtonGroup">
-          <button id="playButton" class="buttonSettings"></button>
-          <button id="pauseButton" class="buttonSettings hide"></button>
-          <button id="stopButton" class="buttonSettings"></button>
-          <button id="addButton" class="buttonSettings"></button>
-          <button id="subtractButton" class="buttonSettings"></button>
-        </div>
-      </section>
-      <section class="soundCards">
-        <button id="forestCard" class="cardSound">
-          <audio id="forestSound" src="./assets/audio/Floresta.wav"></audio>
-          <img src="./assets/images/forest.svg" alt="Desenho de uma arvore">
-          <img src="./assets/images/forestHover.svg" alt="Desenho de uma arvore">
-          <input type="range" min="0" max="100" value="0" class="volumeBar" />
-        </button>
-        <button id="rainCard" class="cardSound">
-          <audio id="rainSound" src="./assets/audio/Chuva.wav"></audio>
-          <img src="./assets/images/rain.svg" alt="Desenho de uma nuvem com chuva">
-          <img src="./assets/images/rainHover.svg" alt="Desenho de uma nuvem com chuva">
-          <input type="range" min="0" max="100" value="0" class="volumeBar" />
-        </button>
-        <button id="coffeShopCard" class="cardSound">
-          <audio id="coffeShopSound" src="./assets/audio/Cafeteria.wav"></audio>
-          <img src="./assets/images/coffeShop.svg" alt="Desenho de uma cafeteria">
-          <img src="./assets/images/coffeShopHover.svg" alt="Desenho de uma cafeteria">
-          <input type="range" min="0" max="100" value="0" class="volumeBar" />
-        </button>
-        <button id="firePlaceCard" class="cardSound">
-          <audio id="firePlaceSound" src="./assets/audio/Lareira.wav"></audio>
-          <img src="./assets/images/firePlace.svg" alt="Desenho de uma chama">
-          <img src="./assets/images/firePlaceHover.svg" alt="Desenho de uma chama">
-          <input type="range" min="0" max="100" value="0" class="volumeBar" />
-        </button>
-      </section>
-    </main>
-    <script src="./js/index.js" type="module"></script>
-  </body>
+    </div>
+    <section class="timer">
+      <div class="clock">
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+      </div>
+      <div class="settingsButtonGroup">
+        <button id="playButton" class="buttonSettings"></button>
+        <button id="pauseButton" class="buttonSettings hide"></button>
+        <button id="stopButton" class="buttonSettings"></button>
+        <button id="addButton" class="buttonSettings"></button>
+        <button id="subtractButton" class="buttonSettings"></button>
+      </div>
+    </section>
+    <section class="soundCards">
+      <button id="forestCard" class="cardSound">
+        <img src="./assets/images/forest.svg" alt="Desenho de uma arvore" />
+        <img src="./assets/images/forestHover.svg" alt="Desenho de uma arvore" />
+        <input type="range" min="0" max="100" value="50" class="volumeBar" />
+      </button>
+      <button id="rainCard" class="cardSound">
+        <img src="./assets/images/rain.svg" alt="Desenho de uma nuvem com chuva" />
+        <img src="./assets/images/rainHover.svg" alt="Desenho de uma nuvem com chuva" />
+        <input type="range" min="0" max="100" value="50" class="volumeBar" />
+      </button>
+      <button id="coffeShopCard" class="cardSound">
+        <img src="./assets/images/coffeShop.svg" alt="Desenho de uma cafeteria" />
+        <img src="./assets/images/coffeShopHover.svg" alt="Desenho de uma cafeteria" />
+        <input type="range" min="0" max="100" value="50" class="volumeBar" />
+      </button>
+      <button id="firePlaceCard" class="cardSound">
+        <img src="./assets/images/firePlace.svg" alt="Desenho de uma chama" />
+        <img src="./assets/images/firePlaceHover.svg" alt="Desenho de uma chama" />
+        <input type="range" min="0" max="100" value="50" class="volumeBar" />
+      </button>
+    </section>
+  </main>
+  <script src="./js/index.js" type="module"></script>
+</body>
+
 </html>

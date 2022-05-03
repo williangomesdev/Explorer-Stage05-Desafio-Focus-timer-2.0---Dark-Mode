@@ -5,8 +5,6 @@ export default function ({
   standardMinutes,
   standardSeconds,
 }) {
-  
-  
   //Evento botão play/pause
   playButton.addEventListener("click", function () {
     controls.play();

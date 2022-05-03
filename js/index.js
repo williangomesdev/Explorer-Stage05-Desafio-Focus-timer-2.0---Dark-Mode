@@ -12,11 +12,7 @@ const {
   pauseButton,
   addButton,
   subtractButton,
-  forestCard,
-  forestSound,
-  rainSound,
-  coffeShopSound,
-  firePlaceSound,
+  volumeBar,
   standardMinutes,
   standardSeconds,
   buttonLightDarkMode,
@@ -39,21 +35,7 @@ const timer = Timer({
   resetControls: controls.reset,
 });
 
-const soundCards = SoundCards({
-  forestCard,
-  forestSound,
-  rainSound,
-  coffeShopSound,
-  firePlaceSound,
-});
-
-Events({
-  controls,
-  timer,
-  soundCards,
-  standardMinutes,
-  standardSeconds,
-});
+const soundCards = SoundCards();
 
 //Evento Dark/Light Mode
 buttonLightDarkMode.addEventListener("click", function () {
@@ -64,4 +46,28 @@ buttonLightDarkMode.addEventListener("click", function () {
     boxInsideBall.setAttribute("style", "transform:translateX(-100%)");
     body.classList.toggle("darkMode");
   }
+});
+
+//Evento volumeBar
+
+Events({
+  controls,
+  timer,
+  soundCards,
+  standardMinutes,
+  standardSeconds,
+});
+
+const audioCards = [
+  soundCards.forestSound,
+  soundCards.rainSound,
+  soundCards.coffeShopSound,
+  soundCards.firePlaceSound,
+];
+volumeBar.forEach((progressBar) => {
+  progressBar.addEventListener("mousemove", () => {
+    for (let audioCard of audioCards) {
+      audioCard.volume = progressBar.value / 100;
+    }
+  });
 });

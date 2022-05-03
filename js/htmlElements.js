@@ -6,6 +6,7 @@ const pauseButton = document.querySelector("#pauseButton");
 const stopButton = document.querySelector("#stopButton");
 const addButton = document.querySelector("#addButton");
 const subtractButton = document.querySelector("#subtractButton");
+const volumeBar = Array.from(document.querySelectorAll(".volumeBar"));
 const forestCard = document.querySelector("#forestCard");
 const forestSound = document.querySelector("#forestSound");
 const rainCard = document.querySelector("#rainCard");
@@ -30,6 +31,7 @@ export const elements = {
   stopButton,
   addButton,
   subtractButton,
+  volumeBar,
   forestCard,
   forestSound,
   rainCard,

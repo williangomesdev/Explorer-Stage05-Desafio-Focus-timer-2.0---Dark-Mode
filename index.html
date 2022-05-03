@@ -13,7 +13,6 @@
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
     <title>FocusTimer - 2.0</title>
   </head>
-
   <body>
     <main>
       <div class="buttonLightDarkmode" id="buttonLightDarkMode">
@@ -48,8 +47,9 @@
         </div>
       </section>
       <section class="soundCards">
-        <button id="forestCard" class="cardSound">
+        <button id="forestCard" class="darkCard">
           <audio id="forestSound" src="./assets/audio/Floresta.wav"></audio>
+          <input type="range" min="1" max="100" value="1" class="progressBar" />
         </button>
         <button id="rainCard" class="cardSound">
           <audio id="rainSound" src="./assets/audio/Chuva.wav"></audio>
@@ -62,7 +62,6 @@
         </button>
       </section>
     </main>
-
     <script src="./js/index.js" type="module"></script>
   </body>
 </html>

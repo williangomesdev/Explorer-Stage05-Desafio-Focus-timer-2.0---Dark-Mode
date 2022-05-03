@@ -6,26 +6,28 @@
 }
 
 :root {
-  --bg-main-color: hsla(0, 0%, 100%, 1);
   --bg-base: 240;
+  --bg-main-color: hsla(0, 0%, 100%, 1);
   --bg-button: hsla(var(--bg-base), 9%, 89%, 1);
   --bg-base-hover: 194;
   --bg-button-hover: hsla(var(--bg-base-hover), 97%, 41%, 1);
   --bg-button-hover-active: hsla(var(--bg-base-hover), 97%, 31%, 1);
   --fc: hsla(var(--bg-base), 6%, 21%, 1);
   font-size: 62.5%;
+  transition: all 1s ease;
 }
 
 :root body.darkMode {
-  --fc: hsla(0, 0%, 100%, 1);
   --bg-base: 240;
-  --bg-button: hsla(var(--bg-base), 9%, 89%, 1);
+  --bg-main-color: hsla(var(--bg-base), 5%, 7%, 1);
+  --bg-button: hsla(var(--bg-base), 7%, 78%, 1);
   --bg-base-hover: 194;
-  --bg-cards: hsla(var(--bg-base), 6%, 21%, 1);
+  --bg-cards: hsla(var(--bg-base), 6%, 17%, 1);
   --bg-button-hover: hsla(var(--bg-base-hover), 97%, 41%, 1);
   --bg-button-hover-active: hsla(var(--bg-base-hover), 97%, 31%, 1);
-  --bg-main-color: #000000;
+  --fc: hsla(0, 0%, 100%, 1);
   font-size: 62.5%;
+  transition: all 1s ease;
 }
 
 *::selection {
@@ -139,8 +141,9 @@ button {
   background-image: url("../assets/images/play.svg");
 }
 
+
 .buttonSettings:hover#playButton,
-body.activeDark #playButton {
+body.darkMode #playButton {
   background-image: url("../assets/images/playHover.svg");
 }
 
@@ -149,7 +152,7 @@ body.activeDark #playButton {
 }
 
 .buttonSettings:hover#pauseButton,
-body.activeDark #pauseButton {
+body.darkMode #pauseButton {
   background-image: url("../assets/images/pauseHover.svg");
 }
 
@@ -158,7 +161,7 @@ body.activeDark #pauseButton {
 }
 
 .buttonSettings:hover#stopButton,
-body.activeDark #stopButton {
+body.darkMode #stopButton {
   background-image: url("../assets/images/stopHover.svg");
 }
 
@@ -167,7 +170,7 @@ body.activeDark #stopButton {
 }
 
 .buttonSettings:hover#addButton,
-body.activeDark #addButton {
+body.darkMode #addButton {
   background-image: url("../assets/images/addHover.svg");
 }
 
@@ -176,7 +179,7 @@ body.activeDark #addButton {
 }
 
 .buttonSettings:hover#subtractButton,
-body.activeDark #subtractButton {
+body.darkMode #subtractButton {
   background-image: url("../assets/images/subtractHover.svg");
 }
 
@@ -188,8 +191,7 @@ body.activeDark #subtractButton {
   gap: 3.2rem;
 }
 
-.cardSound,
-body.activeDark .cardSound {
+.cardSound {
   width: 13.8rem;
   height: 15.2rem;
   background-repeat: no-repeat;
@@ -198,23 +200,18 @@ body.activeDark .cardSound {
   justify-content: center;
   align-items: center;
   border-radius: 2.4rem;
-}
-
-body.activeDark .cardSound {
-  background: var(--bg-cards) transparent;
-  background-repeat: no-repeat;
-  background-position: center;
+  position: relative;
 }
 
 .cardSound:hover,
-body.activeDark .cardSound:hover {
+body.darkMode .cardSound:hover {
   background: var(--bg-button-hover);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .activeCard,
-body.activeDark .activeCard {
+body.darkMode .activeCard {
   width: 13.8rem;
   height: 15.2rem;
   background: var(--bg-button-hover-active);
@@ -232,7 +229,7 @@ body.activeDark .activeCard {
 
 .cardSound:hover#forestCard,
 .activeCard#forestCard,
-body.activeDark .activeCard#forestCard {
+body.darkMode .activeCard#forestCard {
   background-image: url("../assets/images/forestHover.svg");
 }
 
@@ -261,6 +258,18 @@ body.activeDark .activeCard#forestCard {
 .cardSound:hover#firePlaceCard,
 .activeCard#firePlaceCard {
   background-image: url("../assets/images/firePlaceHover.svg");
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  background: var(--bg-main-color);
+  border-radius: 0.5rem;
+  height: 0.7rem;
+  position: absolute;
+}
+.progessBar {
+  margin-top: 2rem;
+  width: 9rem;
 }
 
 @media (max-width: 768px) {

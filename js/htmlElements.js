@@ -1,3 +1,4 @@
+const body = document.querySelector("body");
 const minutesDisplay = document.querySelector("#minutes");
 const secondsDisplay = document.querySelector("#seconds");
 const playButton = document.querySelector("#playButton");
@@ -13,11 +14,15 @@ const coffeShopCard = document.querySelector("#coffeShopCard");
 const coffeShopSound = document.querySelector("#coffeShopSound");
 const firePlaceCard = document.querySelector("#firePlaceCard");
 const firePlaceSound = document.querySelector("#firePlaceSound");
+const buttonLightDarkMode = document.querySelector("#buttonLightDarkMode");
+const boxButton = document.querySelector("#boxButton");
+const boxInsideBall = document.querySelector("#boxInsideBall");
 const standardMinutes = 0;
 const standardSeconds = 0;
 let count = 0;
 
 export const elements = {
+  body,
   minutesDisplay,
   secondsDisplay,
   playButton,
@@ -35,5 +40,8 @@ export const elements = {
   firePlaceSound,
   standardMinutes,
   standardSeconds,
+  buttonLightDarkMode,
+  boxButton,
+  boxInsideBall,
   count,
 };

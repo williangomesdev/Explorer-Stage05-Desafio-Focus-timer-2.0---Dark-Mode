@@ -5,6 +5,7 @@ import SoundCards from "./soundCards.js";
 import Events from "./events.js";
 
 const {
+  body,
   minutesDisplay,
   secondsDisplay,
   playButton,
@@ -18,6 +19,10 @@ const {
   firePlaceSound,
   standardMinutes,
   standardSeconds,
+  checkbox,
+  buttonLightDarkMode,
+  boxButton,
+  boxInsideBall,
   count,
 } = elements;
 
@@ -44,4 +49,21 @@ const soundCards = SoundCards({
   firePlaceSound,
 });
 
-Events({ controls, timer, soundCards, standardMinutes, standardSeconds });
+Events({
+  controls,
+  timer,
+  soundCards,
+  standardMinutes,
+  standardSeconds,
+});
+
+//Evento Dark/Light Mode
+buttonLightDarkMode.addEventListener("click", function () {
+  if (body.classList.contains("darkMode")) {
+    boxInsideBall.setAttribute("style", "transform:translateX(0%)");
+    body.classList.remove("darkMode");
+  } else {
+    boxInsideBall.setAttribute("style", "transform:translateX(-100%)");
+    body.classList.toggle("darkMode");
+  }
+});

@@ -42,44 +42,28 @@ export default function Controls({
     minutesDisplay.textContent = String(count).padStart(2, "0");
   }
   function forestCardActive() {
-    forestCard.classList.toggle("cardSound");
     forestCard.classList.toggle("activeCard");
     rainCard.classList.remove("activeCard");
-    rainCard.classList.add("cardSound");
     coffeShopCard.classList.remove("activeCard");
-    coffeShopCard.classList.add("cardSound");
     firePlaceCard.classList.remove("activeCard");
-    firePlaceCard.classList.add("cardSound");
   }
   function rainCardActive() {
-    rainCard.classList.toggle("cardSound");
-    rainCard.classList.toggle("activeCard");
     forestCard.classList.remove("activeCard");
-    forestCard.classList.add("cardSound");
+    rainCard.classList.toggle("activeCard");
     coffeShopCard.classList.remove("activeCard");
-    coffeShopCard.classList.add("cardSound");
     firePlaceCard.classList.remove("activeCard");
-    firePlaceCard.classList.add("cardSound");
   }
   function coffeShopCardActive() {
-    coffeShopCard.classList.toggle("cardSound");
-    coffeShopCard.classList.toggle("activeCard");
     forestCard.classList.remove("activeCard");
-    forestCard.classList.add("cardSound");
     rainCard.classList.remove("activeCard");
-    rainCard.classList.add("cardSound");
+    coffeShopCard.classList.toggle("activeCard");
     firePlaceCard.classList.remove("activeCard");
-    firePlaceCard.classList.add("cardSound");
   }
   function firePlaceCardActive() {
-    firePlaceCard.classList.toggle("cardSound");
-    firePlaceCard.classList.toggle("activeCard");
     forestCard.classList.remove("activeCard");
     rainCard.classList.remove("activeCard");
     coffeShopCard.classList.remove("activeCard");
-    forestCard.classList.add("cardSound");
-    rainCard.classList.add("cardSound");
-    coffeShopCard.classList.add("cardSound");
+    firePlaceCard.classList.toggle("activeCard");
   }
 
   return {

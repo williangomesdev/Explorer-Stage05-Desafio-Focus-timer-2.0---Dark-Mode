@@ -19,9 +19,7 @@ const {
   firePlaceSound,
   standardMinutes,
   standardSeconds,
-  checkbox,
   buttonLightDarkMode,
-  boxButton,
   boxInsideBall,
   count,
 } = elements;

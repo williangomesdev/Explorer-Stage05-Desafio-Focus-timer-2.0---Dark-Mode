@@ -199,76 +199,64 @@ body.darkMode #subtractButton {
   position: relative;
   background: var(--bg-button);
   z-index: 1;
+  text-align: center;
+}
+
+.cardSound img {
+  position: absolute;
+  top: 2.4rem;
+  bottom: 7.2rem;
+  width: 5.6rem;
+  height: 5.6rem;
+}
+
+.cardSound img:nth-of-type(2) {
+  display: none;
+}
+
+.volumeBar {
+  -webkit-appearance: none;
+  background: var(--fc);
+  outline: none;
+  width: 9rem;
+  height: 0.4rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 0;
+  margin: 11.2rem 2.4rem 2.4rem;
+}
+
+.volumeBar::-webkit-slider-thumb {
+  --webkit-appearance: none;
+  appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background: var(--fc);
 }
 
 .cardSound:hover {
   background: var(--bg-button-hover);
-  background-repeat: no-repeat;
-  background-position: center;
+}
+
+body.darkMode .cardSound img:nth-of-type(1),
+.cardSound:hover img:nth-of-type(1) {
+  display: none;
+}
+
+body.darkMode .cardSound img:nth-of-type(2),
+.cardSound:hover img:nth-of-type(2) {
+  display: block;
+}
+
+.cardSound:hover .volumeBar,
+.cardSound:hover .volumeBar::-webkit-slider-thumb {
+  background: var(--bg-main-color);
 }
 
 .activeCard {
-  width: 13.8rem;
-  height: 15.2rem;
   background: var(--bg-button-hover-active);
-  background-repeat: no-repeat !important;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 2.4rem;
-}
-
-#forestCard {
-  background-image: url("../assets/images/forest.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 2;
-}
-
-.cardSound:hover#forestCard,
-.activeCard#forestCard,
-body.darkMode #forestCard {
-  background-image: url("../assets/images/forestHover.svg");
-}
-
-#rainCard {
-  background-image: url("../assets/images/rain.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 2;
-}
-
-.cardSound:hover#rainCard,
-.activeCard#rainCard,
-body.darkMode #rainCard {
-  background-image: url("../assets/images/rainHover.svg");
-}
-
-#coffeShopCard {
-  background-image: url("../assets/images/coffeShop.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 2;
-}
-
-.cardSound:hover#coffeShopCard,
-.activeCard#coffeShopCard,
-body.darkMode #coffeShopCard {
-  background-image: url("../assets/images/coffeShopHover.svg");
-}
-
-#firePlaceCard {
-  background-image: url("../assets/images/firePlace.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 2;
-}
-
-.cardSound:hover#firePlaceCard,
-.activeCard#firePlaceCard,
-body.darkMode #firePlaceCard {
-  background-image: url("../assets/images/firePlaceHover.svg");
 }
 
 @media (max-width: 768px) {

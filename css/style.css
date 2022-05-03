@@ -20,9 +20,8 @@
 :root body.darkMode {
   --bg-base: 240;
   --bg-main-color: hsla(var(--bg-base), 5%, 7%, 1);
-  --bg-button: hsla(var(--bg-base), 7%, 78%, 1);
+  --bg-button: hsla(var(--bg-base), 6%, 17%, 1);
   --bg-base-hover: 194;
-  --bg-cards: hsla(var(--bg-base), 6%, 17%, 1);
   --bg-button-hover: hsla(var(--bg-base-hover), 97%, 41%, 1);
   --bg-button-hover-active: hsla(var(--bg-base-hover), 97%, 31%, 1);
   --fc: hsla(0, 0%, 100%, 1);
@@ -141,7 +140,6 @@ button {
   background-image: url("../assets/images/play.svg");
 }
 
-
 .buttonSettings:hover#playButton,
 body.darkMode #playButton {
   background-image: url("../assets/images/playHover.svg");
@@ -194,24 +192,22 @@ body.darkMode #subtractButton {
 .cardSound {
   width: 13.8rem;
   height: 15.2rem;
-  background-repeat: no-repeat;
-  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 2.4rem;
   position: relative;
+  background: var(--bg-button);
+  z-index: 1;
 }
 
-.cardSound:hover,
-body.darkMode .cardSound:hover {
+.cardSound:hover {
   background: var(--bg-button-hover);
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.activeCard,
-body.darkMode .activeCard {
+.activeCard {
   width: 13.8rem;
   height: 15.2rem;
   background: var(--bg-button-hover-active);
@@ -225,51 +221,54 @@ body.darkMode .activeCard {
 
 #forestCard {
   background-image: url("../assets/images/forest.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
 }
 
 .cardSound:hover#forestCard,
 .activeCard#forestCard,
-body.darkMode .activeCard#forestCard {
+body.darkMode #forestCard {
   background-image: url("../assets/images/forestHover.svg");
 }
 
 #rainCard {
   background-image: url("../assets/images/rain.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
 }
 
 .cardSound:hover#rainCard,
-.activeCard#rainCard {
+.activeCard#rainCard,
+body.darkMode #rainCard {
   background-image: url("../assets/images/rainHover.svg");
 }
 
 #coffeShopCard {
   background-image: url("../assets/images/coffeShop.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
 }
 
 .cardSound:hover#coffeShopCard,
-.activeCard#coffeShopCard {
+.activeCard#coffeShopCard,
+body.darkMode #coffeShopCard {
   background-image: url("../assets/images/coffeShopHover.svg");
 }
 
 #firePlaceCard {
   background-image: url("../assets/images/firePlace.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
 }
 
 .cardSound:hover#firePlaceCard,
-.activeCard#firePlaceCard {
+.activeCard#firePlaceCard,
+body.darkMode #firePlaceCard {
   background-image: url("../assets/images/firePlaceHover.svg");
-}
-
-input[type="range"] {
-  -webkit-appearance: none;
-  background: var(--bg-main-color);
-  border-radius: 0.5rem;
-  height: 0.7rem;
-  position: absolute;
-}
-.progessBar {
-  margin-top: 2rem;
-  width: 9rem;
 }
 
 @media (max-width: 768px) {

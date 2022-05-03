@@ -21,6 +21,8 @@ export default function SoundCards() {
       rainSound.pause();
       coffeShopSound.pause();
       firePlaceSound.pause();
+    } else {
+      forestSound.pause();
     }
   }
   function rainCardSound() {
@@ -29,6 +31,8 @@ export default function SoundCards() {
       rainSound.play();
       coffeShopSound.pause();
       firePlaceSound.pause();
+    } else {
+      rainSound.pause();
     }
   }
   function coffeShopCardSound() {
@@ -37,6 +41,8 @@ export default function SoundCards() {
       rainSound.pause();
       coffeShopSound.play();
       firePlaceSound.pause();
+    } else {
+      coffeShopSound.pause();
     }
   }
   function firePlaceCardSound() {
@@ -45,6 +51,8 @@ export default function SoundCards() {
       rainSound.pause();
       coffeShopSound.pause();
       firePlaceSound.play();
+    } else {
+      firePlaceSound.pause();
     }
   }
 

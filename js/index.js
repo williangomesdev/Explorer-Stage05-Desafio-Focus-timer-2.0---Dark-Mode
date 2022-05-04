@@ -49,15 +49,6 @@ buttonLightDarkMode.addEventListener("click", function () {
 });
 
 //Evento volumeBar
-
-Events({
-  controls,
-  timer,
-  soundCards,
-  standardMinutes,
-  standardSeconds,
-});
-
 const audioCards = [
   soundCards.forestSound,
   soundCards.rainSound,
@@ -70,4 +61,12 @@ volumeBar.forEach((progressBar) => {
       audioCard.volume = progressBar.value / 100;
     }
   });
+});
+
+Events({
+  controls,
+  timer,
+  soundCards,
+  standardMinutes,
+  standardSeconds,
 });

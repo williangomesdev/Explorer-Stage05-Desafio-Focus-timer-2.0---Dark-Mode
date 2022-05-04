@@ -5,7 +5,7 @@ export default function ({
   standardMinutes,
   standardSeconds,
 }) {
-  //Evento botão play/pause
+  //Evento botão play/pause/add/subtract
   playButton.addEventListener("click", function () {
     controls.play();
     timer.countDownSeconds();

@@ -44,7 +44,7 @@ Projeto simples de um cronometro, ajustado com o acréscimo ou remoção de minu
 
 ## Demonstração
 <p align="center">
-<img src="./assets/github/focustimer2.0.gif">
+<img src="./assets/github/focustimer2.0darkmode.gif">
 </p>
 
 ## Tecnologias

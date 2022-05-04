@@ -22,6 +22,7 @@
 Projeto simples de um cronometro, ajustado com o acréscimo ou remoção de minutos usando os botões + ou -, podendo escutar uma musica enquanto usa o cronometro, acessando pelos cards que estão na tela, também é possível pausar e parar a hora que o usuário quiser,adicionado função de ajustar o volume da musica contida no card.
 
 ## Funcionalidades
+
 [x] Botão para adicionar ou remover minutos do cronometro
 
 [x] Cronômetro com funções de play, pause e parar
@@ -36,9 +37,9 @@ Projeto simples de um cronometro, ajustado com o acréscimo ou remoção de minu
 
 [x] Funções refatoradas dos conômetro
 
-[] Funções refatoradas dos temas light e dark
+[] Funções refatoradas dos temas light e dark(Refatorando)
 
-[] Funções refatoradas dos de ajuste de volume
+[] Funções refatoradas dos de ajuste de volume(Refatorando)
 
 
 ## Demonstração

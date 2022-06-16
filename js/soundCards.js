@@ -21,9 +21,9 @@ export default function SoundCards() {
       rainSound.pause();
       coffeShopSound.pause();
       firePlaceSound.pause();
-    } else {
+    } /* else {
       forestSound.pause();
-    }
+    } */
   }
   function rainCardSound() {
     if (rainCard.classList.contains("activeCard")) {
@@ -31,9 +31,9 @@ export default function SoundCards() {
       rainSound.play();
       coffeShopSound.pause();
       firePlaceSound.pause();
-    } else {
+    } /* else {
       rainSound.pause();
-    }
+    } */
   }
   function coffeShopCardSound() {
     if (coffeShopCard.classList.contains("activeCard")) {
@@ -41,9 +41,9 @@ export default function SoundCards() {
       rainSound.pause();
       coffeShopSound.play();
       firePlaceSound.pause();
-    } else {
+    } /* else {
       coffeShopSound.pause();
-    }
+    } */
   }
   function firePlaceCardSound() {
     if (firePlaceCard.classList.contains("activeCard")) {
@@ -51,9 +51,9 @@ export default function SoundCards() {
       rainSound.pause();
       coffeShopSound.pause();
       firePlaceSound.play();
-    } else {
+    } /* else {
       firePlaceSound.pause();
-    }
+    } */
   }
 
   return {

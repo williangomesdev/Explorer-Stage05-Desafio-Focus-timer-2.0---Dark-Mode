@@ -20,13 +20,17 @@ export default function Controls({
     addButton.setAttribute("disabled", "disabled");
     subtractButton.setAttribute("disabled", "disabled");
   }
+
   function stop() {
     reset();
     count = 0;
   }
+
   function add() {
-    if (count <= 90) {
+    if (count <= 90 && count == 0) {
       count = count + 5;
+    } else if (count <= 90 && count >= 1) {
+      count = Number(minutesDisplay.textContent) + 5;
     }
 
     minutesDisplay.textContent = String(count).padStart(2, "0");
@@ -36,7 +40,7 @@ export default function Controls({
       subtractButton.disable = true;
     } else if (count >= 5) {
       subtractButton.disable = false;
-      count = count - 5;
+      count = Number(minutesDisplay.textContent) - 5;
     }
 
     minutesDisplay.textContent = String(count).padStart(2, "0");

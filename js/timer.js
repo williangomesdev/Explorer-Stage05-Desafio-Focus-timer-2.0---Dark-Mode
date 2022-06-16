@@ -22,6 +22,7 @@ export default function Timer({
     timerTimeOut = setTimeout(function () {
       let seconds = displayNumber(secondsDisplay);
       let minutes = displayNumber(minutesDisplay);
+      let currentMinutes;
 
       if (minutes == 0 && seconds == 0) {
         resetControls();
